@@ -1,0 +1,2 @@
+json.extract! project, :id, :Professional_Services_Org, :Customer_Name, :Sow_Name, :Sow_Hours, :Start_Date, :Go_Live, :Project_Description, :created_at, :updated_at
+json.url project_url(project, format: :json)

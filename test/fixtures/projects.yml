@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Professional_Services_Org: MyString
+  Customer_Name: MyString
+  Sow_Name: MyString
+  Sow_Hours: 1
+  Start_Date: 2016-12-29
+  Go_Live: 2016-12-29
+  Project_Description: MyText
+
+two:
+  Professional_Services_Org: MyString
+  Customer_Name: MyString
+  Sow_Name: MyString
+  Sow_Hours: 1
+  Start_Date: 2016-12-29
+  Go_Live: 2016-12-29
+  Project_Description: MyText

@@ -1,0 +1,1 @@
+json.partial! "idds/idd", idd: @idd

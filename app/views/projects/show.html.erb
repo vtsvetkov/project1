@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Professional services org:</strong>
+  <%= @project.Professional_Services_Org %>
+</p>
+
+<p>
+  <strong>Customer name:</strong>
+  <%= @project.Customer_Name %>
+</p>
+
+<p>
+  <strong>Sow name:</strong>
+  <%= @project.Sow_Name %>
+</p>
+
+<p>
+  <strong>Sow hours:</strong>
+  <%= @project.Sow_Hours %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @project.Start_Date %>
+</p>
+
+<p>
+  <strong>Go live:</strong>
+  <%= @project.Go_Live %>
+</p>
+
+<p>
+  <strong>Project description:</strong>
+  <%= @project.Project_Description %>
+</p>
+
+<div id="idds_wrapper">
+  <% @project.idds.each do |idd| %>
+  <%= link_to idd.integration_id, idd_path(idd) %>
+  <%= link_to "Delete IDD", project_idd_path(@project, idd), method: :delete, data: { confirm: "Are you sure?"} %>
+  <br>
+<% end %>
+</div>
+
+<%= link_to 'Create New IDD', new_project_idd_path(@project) %>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

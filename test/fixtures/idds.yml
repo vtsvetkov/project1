@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  integration_id: MyString
+  integration_name: MyString
+  integration_type: MyString
+  originating_system: MyString
+  destination_system: MyString
+  project: one
+
+two:
+  integration_id: MyString
+  integration_name: MyString
+  integration_type: MyString
+  originating_system: MyString
+  destination_system: MyString
+  project: two

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Idds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Integration</th>
+      <th>Integration name</th>
+      <th>Integration type</th>
+      <th>Originating system</th>
+      <th>Destination system</th>
+      <th>Project</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @idds.each do |idd| %>
+      <tr>
+        <td><%= idd.integration_id %></td>
+        <td><%= idd.integration_name %></td>
+        <td><%= idd.integration_type %></td>
+        <td><%= idd.originating_system %></td>
+        <td><%= idd.destination_system %></td>
+        <td><%= idd.project.Sow_Name %></td>
+        <td><%= link_to 'Show', idd %></td>
+        <td><%= link_to 'Edit', edit_idd_path(idd) %></td>
+        <td><%= link_to 'Destroy', idd, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idd', new_idd_path %>
+<%= link_to 'All Projects', projects_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Integration:</strong>
+  <%= @idd.integration_id %>
+</p>
+
+<p>
+  <strong>Integration name:</strong>
+  <%= @idd.integration_name %>
+</p>
+
+<p>
+  <strong>Integration type:</strong>
+  <%= @idd.integration_type %>
+</p>
+
+<p>
+  <strong>Originating system:</strong>
+  <%= @idd.originating_system %>
+</p>
+
+<p>
+  <strong>Destination system:</strong>
+  <%= @idd.destination_system %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= link_to @idd.project.Sow_Name, project_path(@idd.project.id) %>
+</p>
+
+<%= link_to 'Edit', edit_idd_path(@idd) %> |
+<%= link_to 'Back', idds_path %>
