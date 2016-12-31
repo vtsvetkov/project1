@@ -1,5 +1,5 @@
 class IddsController < ApplicationController
-  before_action :set_idd, only: [:show, :edit, :update, :destroy]
+  before_action :set_idd, only: [:show, :edit, :update, :destroy, :complete]
 
   before_action :set_project, only: [:new]
 
@@ -64,6 +64,11 @@ class IddsController < ApplicationController
       format.html { redirect_to idds_url, notice: 'Idd was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def complete
+    @idd.update_attribute(:out_of_scope_datetime, Time.now )
+    redirect_to project_path, notice: "Marked as out of scope"
   end
 
   private

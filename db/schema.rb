@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161230125211) do
+ActiveRecord::Schema.define(version: 20161231170901) do
 
   create_table "idds", force: :cascade do |t|
     t.string   "integration_id"
@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 20161230125211) do
     t.string   "originating_system"
     t.string   "destination_system"
     t.integer  "project_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.datetime "out_of_scope_datetime"
+    t.text     "out_of_scope_reason"
     t.index ["project_id"], name: "index_idds_on_project_id"
   end
 

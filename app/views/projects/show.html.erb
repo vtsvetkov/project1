@@ -36,13 +36,18 @@
 </p>
 
 <div id="idds_wrapper">
+  <%= render @project.idds %>
+
+</div>
+
+<!-- <div id="idds_wrapper">
   <% @project.idds.each do |idd| %>
   <%= link_to idd.integration_id, idd_path(idd) %>
   <%= link_to "Delete IDD", project_idd_path(@project, idd), method: :delete, data: { confirm: "Are you sure?"} %>
   <br>
 <% end %>
-</div>
-
-<%= link_to 'Create New IDD', new_project_idd_path(@project) %>
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+</div> -->
+<br>
+<%= link_to 'Create New IDD', new_project_idd_path(@project) %> |
+<%= link_to 'Edit Project', edit_project_path(@project) %> |
+<%= link_to 'View All Projects', projects_path %>

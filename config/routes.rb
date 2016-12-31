@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   resources :idds
   # Thinking will not need this for now since all IDDs will be associated to a project.
   resources :projects do
-    resources :idds
+    resources :idds do
+      member do
+        patch :complete
+      end
+    end
   end
 
   root "projects#index"
